@@ -1,0 +1,26 @@
+{
+  "header": "Technologies",
+  "description": "Whatever man, this is just a placeholder",
+  "content": [
+    {
+      "title": "Front End",
+      "items": ["React JS", "Vanilla JS/TS", "HTMX"]
+    },
+    {
+      "title": "Full Stack",
+      "items": ["Next JS", "Astro JS"]
+    },
+    {
+      "title": "Back End",
+      "items": ["Node JS", "MongoDB", "MySQL"]
+    },
+    {
+      "title": "Libraries",
+      "items": ["Tanstack", "Framer Motion", "React Spring"]
+    },
+    {
+      "title": "Tools",
+      "items": ["Vite", "Git", "Jest"]
+    }
+  ]
+}

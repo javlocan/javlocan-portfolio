@@ -1,0 +1,26 @@
+{
+  "header": "Skills",
+  "content": [
+    {
+      "title": "Languages",
+      "items": ["JavaScript", "TypeScript", "HTML", "CSS"]
+    },
+    {
+      "title": "Human Languages",
+      "items": ["Spanish (Native Speaker)", "English (C1 Certificate)"]
+    },
+    {
+      "title": "Approaches",
+      "items": ["SOLID", "TDD", "Agile", "Edge"]
+    },
+    {
+      "title": "So-called soft skills",
+      "items": [
+        "Active listening",
+        "Effective communication",
+        "Critical thinking",
+        "Attention to detail"
+      ]
+    }
+  ]
+}

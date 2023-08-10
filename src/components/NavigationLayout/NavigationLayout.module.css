@@ -1,0 +1,16 @@
+.navigationContainer {
+  position: fixed;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.navigationList li {
+  display: inline-block;
+  margin-inline: 1rem;
+}
