@@ -3,7 +3,6 @@
 import { useEffect } from "react";
 
 import { About, Landing, Skills, Projects } from "./scenes";
-import { Navigation } from "@/components";
 
 export default function Home() {
   useEffect(() => {
@@ -27,7 +26,6 @@ export default function Home() {
 
   return (
     <main>
-      <Navigation />
       <Landing />
       <About />
       <Skills />
