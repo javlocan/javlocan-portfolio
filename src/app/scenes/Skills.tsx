@@ -1,8 +1,10 @@
 export const Skills = () => {
   return (
     <section className="container" id="skills">
-      <div className="about--grid">
-        <h1>Skills</h1>
+      <div className="skills--grid">
+        <h2>SKILLS</h2>
+        <h4>LANGUAGES</h4>
+        <p>JavaScript, TypeScript, HTML, CSS</p>
       </div>
     </section>
   );

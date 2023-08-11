@@ -7,12 +7,22 @@ import Link from "next/link";
 
 export const Navigation = () => {
   useEffect(() => {
+    let nav = document.querySelector("#nav") as HTMLElement;
+    // Initialize styles after CSS is applied
+    if (document.body.scrollTop / window.innerHeight > 1)
+      nav.classList.add(styles.exists);
+
     window.addEventListener(
       "scroll",
+      // Adds this function to the scroll event!
       function () {
-        let nav = document.querySelector("#nav") as HTMLElement;
-        let scrollTop = document.body.scrollTop / window.innerHeight;
+        const scrollTop = document.body.scrollTop / window.innerHeight;
         nav.style.opacity = scrollTop.toString();
+        if (document.body.scrollTop / window.innerHeight > 0.05) {
+          nav.classList.add(styles.exists);
+        } else {
+          nav.classList.remove(styles.exists);
+        }
       },
       true
     );
@@ -45,7 +55,9 @@ export const Navigation = () => {
         />
         <ul className={styles.navigationList}>
           <li>
-            <Link href="/#header">top</Link>
+            <Link href="/#header" replace={true}>
+              top
+            </Link>
           </li>
           <li>
             <Link href="/#about">about</Link>
