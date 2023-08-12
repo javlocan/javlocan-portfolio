@@ -1,6 +1,6 @@
 export const Landing = () => {
   return (
-    <header className="title" id="header">
+    <header id="header">
       <div className="title--grid">
         <h1>JAVIER LOPEZ CANTERO</h1>
         <h4>.developer</h4>
