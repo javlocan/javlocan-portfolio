@@ -1,11 +1,15 @@
 "use client";
 
 import { useEffect } from "react";
-import styles from "./Navigation.module.css";
+
+import { useRouter } from "next/navigation";
+
 import Image from "next/image";
-import Link from "next/link";
+
+import styles from "./Navigation.module.css";
 
 export const Navigation = () => {
+  const router = useRouter();
   useEffect(() => {
     let nav = document.querySelector("#nav") as HTMLElement;
     // Initialize styles after CSS is applied
@@ -26,9 +30,9 @@ export const Navigation = () => {
       },
       true
     );
-    window.document.querySelectorAll("a").forEach((link) => {
+    /*   window.document.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => closeMenu());
-    });
+    }); */
   }, []);
 
   const handleMenu = () => {
@@ -36,9 +40,10 @@ export const Navigation = () => {
     nav.classList.toggle(styles.navOpen);
   };
 
-  const closeMenu = () => {
+  const handleLink = (query: string) => {
     let nav = document.querySelector("#nav") as HTMLElement;
     nav.classList.remove(styles.navOpen);
+    router.replace(query, { scroll: true });
   };
 
   return (
@@ -46,6 +51,7 @@ export const Navigation = () => {
       <nav className={styles.navigationContainer} id="nav">
         <Image
           id="icon"
+          draggable="false"
           className={styles.navIcon}
           src="/icons/MENU.png"
           width="36"
@@ -54,20 +60,11 @@ export const Navigation = () => {
           onClick={() => handleMenu()}
         />
         <ul className={styles.navigationList}>
-          <li>
-            <Link href="/#header" replace={true}>
-              top
-            </Link>
-          </li>
-          <li>
-            <Link href="/#about">about</Link>
-          </li>
-          <li>
-            <Link href="/#skills">skills</Link>
-          </li>
-          <li>
-            <Link href="/#projects">projects</Link>
-          </li>
+          <li onClick={() => handleLink("/#")}>top</li>
+          <li onClick={() => handleLink("/#about")}>about</li>
+          <li onClick={() => handleLink("/#skills")}>skills</li>
+          <li onClick={() => handleLink("/#projects")}>projects</li>
+          <li onClick={() => handleLink("/#")}>router</li>
         </ul>
       </nav>
     </>

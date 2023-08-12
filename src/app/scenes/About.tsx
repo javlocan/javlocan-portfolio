@@ -1,9 +1,17 @@
+import Image from "next/image";
+
 export const About = () => {
   return (
-    <section className="container" id="about">
+    <section id="about">
       <div className="about--grid">
         <h2>Hi! This is me, javi</h2>
-        <img src="/perfil.jpeg" alt="My profile photo" className="photo" />
+        <Image
+          src="/perfil.jpeg"
+          alt="My profile photo"
+          className="photo"
+          width="1000"
+          height="1000"
+        />
         <p>
           A los 13 años destripaba plantillas de Tumblr. CSS2, HTML4...
           ¿Remember Microsoft Frontpage? Lo dejé cuando 10.000 personas habían

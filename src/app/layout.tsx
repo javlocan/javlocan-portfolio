@@ -1,9 +1,19 @@
 import { Navigation } from "@/components";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Lora } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const nunito = Inter({
+  subsets: ["latin"],
+  weight: "variable",
+  variable: "--font-inter",
+  display: "swap",
+});
+const lora = Lora({
+  subsets: ["latin"],
+  weight: "variable",
+  variable: "--font-lora",
+});
 
 export const metadata: Metadata = {
   title: "javlocan.dev",
@@ -16,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={`${lora.variable} ${nunito.variable}`}>
+      <body>
         <Navigation />
         {children}
       </body>
