@@ -40,9 +40,9 @@
 
   top: 2rem;
   right: 2rem;
-  background-color: white;
-  border: 2px solid white;
-  box-shadow: 0 0 0 1rem white;
+  background-color: rgb(215, 215, 215, 0.98);
+  box-shadow: 0 0 0 1rem rgb(215, 215, 215, 0.98);
+
   border-radius: 100%;
   transition:
     box-shadow 0.4s,
@@ -59,8 +59,8 @@
 }
 .navOpen .navIcon {
   display: flex;
-  box-shadow: 0 0 0 1000px white;
-  border-radius: 0;
+
+  box-shadow: 0 0 0 1000px rgb(215, 215, 215, 0.98);
 }
 
 .navOpen .navigationList {

@@ -108,9 +108,29 @@ h1 {
   line-height: 1em;
 }
 h2 {
-  font-weight: 700;
+  font-weight: 790;
   font-size: 2.6rem;
 }
+/* .animated-bg-text {
+  background: linear-gradient(90deg, #000, #454630, #000);
+  background-size: 120%;
+  animation: animate 10s infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.2);
+}
+@keyframes animate {
+  0% {
+    background-position: -300%;
+  }
+  50% {
+    background-position: 300%;
+  }
+  100% {
+    background-position: -300%;
+  }
+} */
+
 h3 {
   font-family: var(--font-lora);
   color: rgba(0, 0, 0, 0.5);
@@ -298,18 +318,18 @@ p {
     column-gap: 2rem;
     align-items: flex-start;
 
-    grid-template-columns: repeat(auto-fill, 12%);
+    grid-template-columns: repeat(auto-fill, 9%);
   }
 
   .skills--grid :nth-child(even) {
-    grid-column: 2/5;
+    grid-column: 3/6;
     text-align: right;
   }
   .skills--grid :nth-child(odd) {
-    grid-column: 5/7;
+    grid-column: 6/9;
   }
   .skills--grid :first-child {
-    grid-column: 1/2;
+    grid-column: 1/3;
     grid-row: 1/3;
   }
   .skills--grid h3 {
