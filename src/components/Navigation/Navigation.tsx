@@ -64,7 +64,6 @@ export const Navigation = () => {
           <li onClick={() => handleLink("/#about")}>about</li>
           <li onClick={() => handleLink("/#skills")}>skills</li>
           <li onClick={() => handleLink("/#projects")}>projects</li>
-          <li onClick={() => handleLink("/#")}>router</li>
         </ul>
       </nav>
     </>

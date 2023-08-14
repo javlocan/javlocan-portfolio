@@ -19,8 +19,8 @@ export const Skills = () => {
         <ul>
           <li>SOLID</li>
           <li>TDD</li>
+          <li>SaaS</li>
           <li>Agile</li>
-          <li>Edge</li>
         </ul>
         <h3>SO-CALLED SOFT SKILLS</h3>
         <ul>
@@ -62,6 +62,7 @@ export const Skills = () => {
         <h3>TOOLS</h3>
         <ul>
           <li>Vite</li>
+          <li>SASS</li>
           <li>Git</li>
           <li>Jest</li>
         </ul>
