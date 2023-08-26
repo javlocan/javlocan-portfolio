@@ -7,21 +7,17 @@ import { useEffect } from "react";
 export const Landing = () => {
   useEffect(() => {
     const icons = document.querySelectorAll(".social--icon");
-    const observer = new IntersectionObserver((entries) => {
-      let delay = 0;
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add("observed");
-          }, delay);
-          //entry.target.classList.add("observed");
-          observer.observe(entry.target);
-          delay = delay + 200;
-        }
-      });
+    let delay = 0;
+    icons.forEach((icon) => {
+      setTimeout(() => {
+        icon.classList.add("observed-icon");
+      }, delay);
+      //entry.target.classList.add("observed");
+
+      delay = delay + 200;
     });
-    icons.forEach((icon) => observer.observe(icon));
   }, []);
+
   return (
     <header id="header">
       <div className="title--grid">
@@ -37,7 +33,7 @@ export const Landing = () => {
               src="/icons/gmail.svg"
               width="30"
               height="30"
-              alt="github icon"
+              alt="gmail icon"
             />
           </Link>
           <Link
@@ -61,7 +57,15 @@ export const Landing = () => {
               src="/icons/linkedin.svg"
               width="30"
               height="30"
-              alt="github icon"
+              alt="linkedin icon"
+            />
+          </Link>
+          <Link href="/cv.pdf" target="_blank" className="social--icon">
+            <Image
+              src="/icons/cv.svg"
+              width="36"
+              height="28"
+              alt="curriculum icon"
             />
           </Link>
         </div>

@@ -53,9 +53,9 @@ export const Navigation = () => {
           id="icon"
           draggable="false"
           className={styles.navIcon}
-          src="/icons/MENU.png"
-          width="36"
-          height="36"
+          src="/icons/menu.svg"
+          width="64"
+          height="64"
           alt="menu icon"
           onClick={() => handleMenu()}
         />
