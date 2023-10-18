@@ -55,8 +55,8 @@ export const Skills = () => {
         <h3>DATABASES</h3>
         <ul>
           <li>MongoDB</li>
+          <li>Mongoose</li>
           <li>MySQL</li>
-          <li>PostgreSQL</li>
         </ul>
 
         <h3>TOOLS</h3>

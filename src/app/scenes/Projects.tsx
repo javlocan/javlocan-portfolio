@@ -1,13 +1,11 @@
 import { Project } from "@/components";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 export const Projects = () => {
   const [projectsImages, setProjectsImages] = useState<string[]>([
     "Buscaminas",
   ]);
   const [displayProject, setDisplayProject] = useState("Buscaminas");
-
-  const [filter, setFilter] = useState("");
 
   useEffect(() => {
     const scrollToDesktop = document.getElementById(
@@ -27,25 +25,21 @@ export const Projects = () => {
     setTimeout(() => {
       desktopContainer?.scrollTo(desktopOffset, 0);
     }, 100);
-
     setTimeout(() => {
       mobileContainer?.scrollTo(0, mobileOffset);
     }, 250);
   }, [displayProject]);
 
-  useEffect(() => {}, [displayProject]);
+  useEffect(() => { }, [displayProject]);
   const handleClick = (project: string) => {
     !projectsImages.includes(project)
       ? setProjectsImages([...projectsImages, project])
       : null;
     setDisplayProject(project);
-    const scrollToDisplay = document.querySelector(".projects__display");
+    const scrollToDisplay = document.getElementById("projects");
     scrollToDisplay?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleFilter = (feature: string) => {
-    setFilter(feature);
-  };
   return (
     <section id="projects">
       <div className="projects__header">
@@ -92,7 +86,6 @@ export const Projects = () => {
             key={project.title}
             data={project}
             handleClick={handleClick}
-            handleFilter={handleFilter}
           />
         ))}
       </div>
@@ -107,16 +100,16 @@ const PROJECT_DATA = [
     description:
       "A simple minesweeper game with mobile-first design (responsive). Includes presets for difficulty, board size and several different other options to customize your game.",
     features: ["Mobile-first", "Responsive", "Panel"],
-    approach: ["Reduced global state"],
-    tech: ["TypeScript", "React", "Vite", "React Spring"],
+    approach: ["Reduced global state", "Memoizing"],
+    tech: ["Vite JS", "React", "TypeScript", "React Spring"],
   },
   {
     title: "Portfolio",
     url: "https://javlocan.vercel.app/",
     description:
       "My portfolio. Here you can read about me, see my projects, contact me, etc.",
-    features: ["Mobile-first", "Responsive", "Panel"],
-    approach: ["SSR", "SOLID"],
-    tech: ["TypeScript", "React", "Vite", "React Spring"],
+    features: ["Mobile-first", "Responsive", "Scroll animations"],
+    approach: ["SSR", "CEO", "Global CSS"],
+    tech: ["Next JS 13", "React", "TypeScript"],
   },
 ];

@@ -72,8 +72,8 @@ export const Landing = () => {
         <div className="title--quote">
           <h5>
             Tras un tiempo explorando profesionalmente el mundo social, he
-            decidido volver a mis raíces de ingeniero como desarrollador
-            <b> frontend </b>y<b> fullstack.</b>
+            decidido volver a mis raíces de ingeniero como desarrollador web
+            <b> fullstack </b>y<b> frontend.</b>
           </h5>
         </div>
       </div>
